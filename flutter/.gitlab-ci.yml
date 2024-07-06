@@ -1,0 +1,12 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - whoami
+    - pwd
+    - uptime
+    - mkdir -p ~/dNull/learn
+  tags:
+    - bfg
