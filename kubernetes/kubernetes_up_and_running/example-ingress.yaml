@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+# current 1.18 -- this file is working
+# networking.k8s.io/v1 = 1.19+
+# networking.k8s.io/v1beta1 == 1.14 to 1.18
+# networking.k8s.io/v1 = 1.19+
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: hello-world.info
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: web
+              servicePort: 8080

@@ -1,0 +1,6 @@
+[submodule "CKA_2ed/cka"]
+	path = CKA_2ed/cka
+	url = https://github.com/sandervanvugt/cka
+[submodule "kubernetes-the-hard-way"]
+	path = kubernetes-the-hard-way
+	url = https://github.com/dnull-project/kubernetes-the-hard-way

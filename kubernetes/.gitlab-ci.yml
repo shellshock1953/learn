@@ -1,0 +1,29 @@
+.deploy: &deploy
+  stage: deploy
+  only:
+    - master
+    - main
+  script: |
+    eval $(ssh-agent)
+    ssh-add "${HOME}/${SSH_KEY}" 1>/dev/null
+    cd "${HOME}/${PROJECT_PATH}"
+    git pull --rebase origin "${CI_COMMIT_BRANCH}"
+  tags: []
+
+stages:
+  - deploy
+
+bfg:deploy:
+  <<: *deploy
+  tags:
+    - bfg
+
+sirius:deploy:
+  <<: *deploy
+  tags:
+    - sirius
+
+pi:deploy:
+  <<: *deploy
+  tags:
+    - pi
