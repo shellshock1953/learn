@@ -1,0 +1,141 @@
+{
+  "main": {
+    "id": "31e98ca6f1cd0bfd",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e5c8e6bd8234b7f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "02de7d9f2eebf468",
+    "type": "split",
+    "children": [
+      {
+        "id": "7632cbfafe6532cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3611ba22d78dc5d6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "6f233b6d093a7638",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f6ba3483e64ff3dc",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d8a260e2472d7503",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebbb1f713464fc9b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7441d2d6e8cb4312",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d492f466e92fdd13",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cdffb15427a82acc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b1823a68cb5fd88d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 191.5,
+    "collapsed": true
+  },
+  "active": "3611ba22d78dc5d6",
+  "lastOpenFiles": [
+    "The 8 Most Important Hotkeys in Obsidian.md",
+    "Victor Frankl.md",
+    "New Note from Hotket.md",
+    "README.md",
+    "The Matrix.md",
+    "The 6 Most Important Keys to Typing in Markdonw.md",
+    "Adversity Paradox.md"
+  ]
+}
