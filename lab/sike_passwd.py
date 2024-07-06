@@ -64,7 +64,7 @@ def main(file, action, user, password, confirm):
         'volumes': ['./gotty.conf:/root/.gotty']
     }
 
-    admin = "shellshock:$$apr1$$WFsfykJx$$XDyyif9VZqIQHWptk0om5/"
+    admin = "admin:passsssss/"
     if not pass_check(password, confirm): exit(1)
 
 
