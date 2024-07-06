@@ -1,0 +1,34 @@
+FROM ubuntu:18.04
+RUN apt update && \
+	apt install -y \
+	python \
+	python-pip \
+	htop \
+	vim \
+	tmux \
+	git \
+	golang \
+	zsh \
+	nano \
+	nmap \
+	wget \
+	curl \
+	fonts-powerline \ 
+	locales \
+	iputils-ping \
+	net-tools && \
+	apt clean && \ 
+	rm -rf /var/lib/apt/lists/* 
+
+RUN pip install ipython
+RUN locale-gen en_US.UTF-8
+
+ENV PATH="${PATH}:/root/go/bin"
+RUN go get github.com/yudai/gotty
+
+ENV TERM="xterm"
+RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' /root/.zshrc
+
+CMD ["gotty", "-w", "-p", "80", "--config", "/root/.gotty", "tmux", "new", "-A", "-s", "gotty", "zsh"]
+EXPOSE 80

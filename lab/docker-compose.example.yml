@@ -1,0 +1,11 @@
+services:
+  user:
+    image: 2xnone/study:gotty
+    labels:
+    - traefik.frontend.auth.basic.users=admin:passheresha/,user:userpassheresha/
+    - traefik.frontend.rule=Host:user.example.com
+    - traefik.port=80
+    restart: always
+    volumes:
+    - ./gotty.conf:/root/.gotty
+version: '3'

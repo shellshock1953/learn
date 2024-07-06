@@ -1,0 +1,33 @@
+defaultEntryPoints = ["http"]
+logLevel = "INFO"
+
+[docker]
+  endpoint = "unix:///var/run/docker.sock"
+  exposedByDefault = true
+
+[api]
+  dashboard = true
+  insecure = true
+  debug = true
+#  entryPoint = "dashboard"
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    regex = "^http://tty.example.com/(.*)"
+    replacement = "http://tty.example.com:9080/$1"
+
+#  [entryPoints.dashboard]
+#  address = ":8080"
+
+#[backends]
+#  [backends.backend-1]
+#    [backends.backend-1.servers.server1]
+#      url = "tty.example.com:9080"
+#[frontends]
+#  [frontends.frontend-1]
+#  backend = "backend-1"
+#  passHostHeader = true
+#  [frontends.frontend-1.routes.test_1]
+#  rule = "Host:tty.example.com"

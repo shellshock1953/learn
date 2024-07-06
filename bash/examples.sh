@@ -37,7 +37,7 @@ function example_touch() {
 }
 
 function example_file() {
-  GIF=http://dnull.systems/ascii.gif
+  GIF=http://example.com/ascii.gif
   header "file"
   example "file" "Show kind of file" "file 1.sh"
   show "curl $GIF --output some.file --silent"
