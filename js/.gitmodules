@@ -1,0 +1,3 @@
+[submodule "JS_DOM/JavaScript-DOM-Tutorial"]
+	path = JS_DOM/JavaScript-DOM-Tutorial
+	url = https://github.com/iamshaunjp/JavaScript-DOM-Tutorial.git
