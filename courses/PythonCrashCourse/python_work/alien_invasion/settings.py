@@ -7,7 +7,7 @@ class Settings:
         self.bullet_height = 45
         self.bullet_width = 9
         self.bullets_allowed = 3
-        self.fleet_drop_speed = 100
+        self.fleet_drop_speed = 10
         self.screen_height = 800
         self.screen_width = 900
         self.ship_limit = 3

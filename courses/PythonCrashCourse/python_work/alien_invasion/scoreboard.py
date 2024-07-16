@@ -11,10 +11,11 @@ class Scoreboard:
         self.font = pygame.font.SysFont(None, 48)
         self.prep_score()
         self.prep_high_score()
+        self.prep_level()
 
     def prep_score(self):
         rounded_score = round(self.stats.score, -1)
-        score_str = "{:,}".format(rounded_score)
+        score_str = "score: {:,}".format(rounded_score)
         self.score_image = self.font.render(score_str, True, self.text_color, self.settings.bg_color)
         self.score_rect = self.score_image.get_rect()
         self.score_rect.right = self.screen_rect.right - 20
@@ -22,7 +23,7 @@ class Scoreboard:
 
     def prep_high_score(self):
         high_score = round(self.stats.high_score, -1)
-        high_score_str = "{:,}".format(high_score)
+        high_score_str = "high score: {:,}".format(high_score)
         self.high_score_image = self.font.render(high_score_str, True, self.text_color, self.settings.bg_color)
 
         self.high_score_rect = self.high_score_image.get_rect()
@@ -33,9 +34,16 @@ class Scoreboard:
     def show_score(self):
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
+        self.screen.blit(self.level_image, self.level_rect)
 
     def check_high_score(self):
         if self.stats.score > self.stats.high_score:
             self.stats.high_score = self.stats.score
             self.prep_high_score()
 
+    def prep_level(self):
+        level_str = "level: {}".format(self.stats.level)
+        self.level_image = self.font.render(level_str, True, self.text_color, self.settings.bg_color)
+        self.level_rect = self.level_image.get_rect()
+        self.level_rect.right = self.score_rect.right
+        self.level_rect.bottom = self.score_rect.bottom + 30
