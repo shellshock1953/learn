@@ -20,7 +20,8 @@ class Ship(Sprite):
         if is_score:
             return pygame.transform.grayscale(
                 pygame.transform.scale_by(
-                    pygame.image.load("images/ship.png"), 0.5
+                    pygame.image.load("images/ship.png"),
+                    self.settings.score_shipts_image_scale
                 )
             )
         else:

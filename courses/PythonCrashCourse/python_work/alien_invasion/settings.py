@@ -13,6 +13,7 @@ class Settings:
         self.ship_limit = 3
         self.speedup_scale = 1.2
         self.score_scale = 1.5
+        self.score_shipts_image_scale = 0.5
 
         self.initialize_dynamic_settings()
 
