@@ -1,0 +1,6 @@
+[submodule "tilt/tilt-avatars"]
+	path = tilt/tilt-avatars
+	url = https://github.com/tilt-dev/tilt-avatars.git
+[submodule "tilt/tilt-helm-demo"]
+	path = tilt/tilt-helm-demo
+	url = https://github.com/tilt-dev/tilt-helm-demo.git
